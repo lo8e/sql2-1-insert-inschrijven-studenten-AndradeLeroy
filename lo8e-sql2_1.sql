@@ -341,3 +341,7 @@ WHERE ov_nummer = '90001';
 
 #Opgelost: Workbench versie: 5.6.30
 #EDIT -> SQL EDITOR -<(unchecked Safe Updates)-herstart workbench
+
+UPDATE studenten
+SET actief = 0
+WHERE studenten.inschrijvings_datum <= 01-01-2017;
