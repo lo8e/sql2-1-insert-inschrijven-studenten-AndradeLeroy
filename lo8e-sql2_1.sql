@@ -338,3 +338,6 @@ VALUES (9000, "Puk", "", "P","Pietje", "1992-02-01", "1000AA", "Amsterdam", "70,
 #Opdracht4:
 UPDATE studenten SET geboortedatum='1992-02-02'
 WHERE ov_nummer = '90001';
+
+#Opgelost: Workbench versie: 5.6.30
+#EDIT -> SQL EDITOR -<(unchecked Safe Updates)-herstart workbench
