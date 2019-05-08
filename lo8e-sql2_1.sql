@@ -86,6 +86,10 @@ ALTER TABLE klassen ADD FOREIGN KEY (opleiding_code) REFERENCES opleidingen(ople
 ALTER TABLE cijfers ADD FOREIGN KEY (ov_nummer) REFERENCES studenten(ov_nummer);
 ALTER TABLE cijfers ADD FOREIGN KEY (vak_code) REFERENCES vakken(vak_code);
 
+
+INSERT INTO opleidingen(`opleiding_code`, `titel`) VALUES
+	('amo', 'Applicatie- en Mediaontwikkelaar');
+
 INSERT INTO docenten(docent_code, voorletters, tussenvoegsel, achternaam) VALUES
 	('brc01','J.P.','','Brackenhoff'), 
     ('rs001','H.', 'van', 'Rosendahl'), 
@@ -315,4 +319,4 @@ INSERT INTO cijfers (ov_nummer, vak_code, jaargang, periode, poging, cijfer)
 		INNER JOIN studenten ON klassen_studenten.ov_nummer = studenten.ov_nummer
 		INNER JOIN lessen ON lessen.klas_code = klassen.klas_code
 		WHERE klassen.cohort = 2017 AND lessen.jaargang = 1
-    ) AS studenten_lessen;
+    ) AS studenten_lessen; 
