@@ -320,3 +320,10 @@ INSERT INTO cijfers (ov_nummer, vak_code, jaargang, periode, poging, cijfer)
 		INNER JOIN lessen ON lessen.klas_code = klassen.klas_code
 		WHERE klassen.cohort = 2017 AND lessen.jaargang = 1
     ) AS studenten_lessen; 
+    
+#opdracht:
+INSERT INTO klassen (klas_code, slb_code, cohort, opleiding_code) 
+VALUES ("lo9e-amo1", "vlt03", "2019", "amo"),
+	   ("lo9e-amo2", "rs001", "2019", "amo"),
+	   ("lo9e-amo3", "bkr02", "2019", "amo");
+
