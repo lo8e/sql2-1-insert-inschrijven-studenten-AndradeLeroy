@@ -1,6 +1,2 @@
-#Opdracht3:
-#INSERT INTO klassen_studenten(klas_code, ov_nummer)
-VALUES("lo9e-amo3", 90000),
-	  ("lo9e-amo1", 90001),
-	  ("lo9e-amo2", 90002),
-	  ("lo9e-amo3", 90003);
+UPDATE studenten SET geboortedatum='1992-02-02'
+WHERE studenten.ov_nummer = '90001';
