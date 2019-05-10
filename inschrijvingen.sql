@@ -1,2 +1,3 @@
-UPDATE studenten SET geboortedatum='1992-02-02'
-WHERE studenten.ov_nummer = '90001';
+#Opgelost: Workbench versie: 5.6.30
+#EDIT -> SQL EDITOR -<(unchecked Safe Updates)-herstart workbench
+
