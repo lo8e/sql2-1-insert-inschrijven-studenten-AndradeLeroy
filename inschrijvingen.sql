@@ -1,3 +1,17 @@
-# Studenten ingeschreven voor 1-1-2017 dienen inactief gezet te worden.
-#* -> Wijzig dit d.m.v een UPDATE statement.UPDATE studenten 
-SET actief = "0" WHERE inschrijvings_datum <= "2017-1-1";
+SELECT studenten.ov_nummer, CONCAT(studenten.voornaam, " ", studenten.tussenvoegsel, " ", studenten.achternaam)
+AS volledigenaam, klassen.klas_code, 
+klassen.cohort, CONCAT(docenten.voorletters," ", docenten.achternaam) AS volledigeDocentenNaam
+
+FROM studenten
+
+INNER JOIN klassen_studenten
+ON klassen_studenten.ov_nummer = studenten.ov_nummer
+
+INNER JOIN klassen
+ON klassen.klas_code = klassen_studenten.klas_code
+
+INNER JOIN docenten
+on docenten.docent_code = klassen.slb_code
+
+WHERE studenten.actief = "1"
+;
